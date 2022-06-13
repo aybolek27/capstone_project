@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="/fragments/head :: head"></head>
+
+<body>
+
+<div class="container d-flex justify-content-center">
+
+    <div class="card">
+        <h2 class="card-header bg-primary text-white p-5">
+            Login
+        </h2>
+        <div class="card-body">
+            <form th:action="@{/user/create}">
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="inputEmail4">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="inputPassword4">Password</label>
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<div th:replace="/fragments/footer :: footer"></div>
+<div th:replace="/fragments/javascript :: js"></div>
+</html>
